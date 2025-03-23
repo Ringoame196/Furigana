@@ -21,7 +21,7 @@ tasks.test {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "$group.MainKt"
+        attributes["Main-Class"] = "com.github.ringoame196.MainKt"
     }
     configurations["compileClasspath"].forEach {
             file: File -> from(zipTree(file.absoluteFile))

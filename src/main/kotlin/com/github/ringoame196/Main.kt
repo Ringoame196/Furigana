@@ -1,6 +1,6 @@
 package com.github.ringoame196
 
-import org.example.com.github.ringoame196.managers.FuriganaManager
+import com.github.ringoame196.managers.FuriganaManager
 import java.util.Scanner
 import kotlin.collections.component1
 import kotlin.collections.component2
