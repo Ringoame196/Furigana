@@ -68,19 +68,6 @@ class FuriganaManager(private val appId: String,private val grade: Int) {
 				furiganaText = "($furigana)"
 			}
 
-			// サブワード（subword）がある場合（分割された単語）
-			if (wordObj.has("subword")) {
-				val subwords = wordObj.getJSONArray("subword")
-				val subwordText = StringBuilder()
-				for (j in 0 until subwords.length()) {
-					val subwordObj = subwords.getJSONObject(j)
-					val subwordSurface = subwordObj.getString("surface")
-					val subwordFurigana = subwordObj.getString("furigana")
-					subwordText.append("$subwordSurface($subwordFurigana)")
-				}
-				furiganaText = subwordText.toString().trim()
-			}
-
 			// 表面の文字とふりがなを組み合わせて表示
 			formattedText.append("$surface$furiganaText")
 		}
